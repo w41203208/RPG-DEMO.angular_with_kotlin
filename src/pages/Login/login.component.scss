@@ -1,0 +1,35 @@
+.btn-container {
+  @apply mb-2 flex w-full;
+}
+.btn {
+  @apply px-3 py-2 mr-2 flex justify-center bg-blue-300 rounded font-semibold text-slate-600 cursor-pointer;
+  @apply hover:bg-blue-400;
+  &.selected {
+    @apply bg-blue-500 text-white;
+    @apply hover:bg-blue-600;
+  }
+}
+
+.input {
+  @apply h-11 flex rounded border-white bg-slate-200 border-2 pr-1 py-1 text-slate-600 font-semibold mb-5;
+  .input-title {
+    @apply h-full px-2 py-1 flex items-center;
+  }
+  .input-outer {
+    @apply h-full flex-1 flex items-center;
+    .input-inner {
+      @apply w-full outline-none px-2 py-1 rounded-r;
+    }
+  }
+}
+
+.btn-control {
+  @apply flex flex-col justify-center items-center;
+  .btn-login {
+    @apply w-24 mb-10;
+  }
+  .btn-go-regitser {
+    @apply font-medium text-gray-500 cursor-pointer mb-10;
+    @apply hover:text-gray-700;
+  }
+}

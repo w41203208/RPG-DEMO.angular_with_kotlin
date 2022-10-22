@@ -1,0 +1,62 @@
+<section class="flex justify-center items-center h-screen">
+  <div class="w-96 flex flex-col items-center h-3/5">
+    <div class="btn-container">
+      <div
+        class="btn"
+        [ngClass]="{ selected: state.toLowerCase() === 'login' }"
+        (click)="onClickEvt_ChangeState('Login')"
+      >
+        Login Page
+      </div>
+      <div
+        class="btn"
+        [ngClass]="{ selected: state.toLowerCase() === 'register' }"
+        (click)="onClickEvt_ChangeState('Register')"
+      >
+        Register Page
+      </div>
+    </div>
+    <div class="w-full rounded bg-slate-200 px-3 py-2 flex-1">
+      <div class="flex flex-col justify-center items-center h-full">
+        <div
+          class="text-5xl font-bold flex justify-center items-center text-slate-600 h-32"
+        >
+          {{ state }}
+        </div>
+        <div class="input">
+          <div class="input-title">Name</div>
+          <div class="input-outer">
+            <input
+              type="text"
+              class="input-inner"
+              [value]="inputData.name"
+              placeholder="測試帳號：test"
+              (input)="onChangeEvt_inputName($event)"
+            />
+          </div>
+        </div>
+        <div class="input">
+          <div class="input-title">Password</div>
+          <div class="input-outer">
+            <input
+              type="text"
+              class="input-inner"
+              [value]="inputData.password"
+              placeholder="測試密碼：test"
+              (input)="onChangeEvt_inputPassword($event)"
+            />
+          </div>
+        </div>
+        <div class="btn-control">
+          <div class="btn btn-login" (click)="onClickEvt_SubmitData()">
+            {{ state }}
+          </div>
+          <div class="btn-go-regitser">
+            go to {{ state.toLowerCase() === "login" ? "register" : "login"
+            }}<span> →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

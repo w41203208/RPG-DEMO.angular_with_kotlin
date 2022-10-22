@@ -1,0 +1,73 @@
+.character-card {
+  max-width: 500px;
+  width: 500px;
+  min-width: 380px;
+  height: 800px;
+  @apply bg-slate-200 rounded flex flex-col p-4;
+  &:hover {
+    .imgAnimation {
+      animation: shake 2s ease-in;
+    }
+  }
+}
+.item-block {
+  @apply rounded h-full p-3 mr-1 bg-white relative mb-1;
+  width: 32%;
+  .item-content {
+    @apply text-sm;
+    &.p {
+      @apply overflow-hidden;
+    }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  10% {
+    transform: rotateZ(-5deg);
+  }
+  20% {
+    transform: rotateZ(0deg);
+  }
+  30% {
+    transform: rotateZ(5deg);
+  }
+  40% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-4deg);
+  }
+  55% {
+    transform: rotateZ(0deg);
+  }
+  60% {
+    transform: rotateZ(4deg);
+  }
+  65% {
+    transform: rotateZ(0deg);
+  }
+  70% {
+    transform: rotateZ(-3deg);
+  }
+  75% {
+    transform: rotateZ(0deg);
+  }
+  80% {
+    transform: rotateZ(3deg);
+  }
+  85% {
+    transform: rotateZ(0deg);
+  }
+  90% {
+    transform: rotateZ(-1deg);
+  }
+  95% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(1deg);
+  }
+}

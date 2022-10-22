@@ -1,0 +1,36 @@
+<ming-layout>
+  <div layout-type="header">
+    <ming-header>
+      <ming-navbar>
+        <div class="flex items-center px-3">
+          <div class="p-3 text-slate-900 text-3xl">
+            <i class="fas fa-store"></i>
+          </div>
+          <ming-navlist>
+            <ming-navitem
+              *ngFor="let item of navList; index as i"
+              [name]="item.name"
+              [link]="item.link"
+              [currentRoute]="currentRoute"
+            >
+            </ming-navitem>
+          </ming-navlist>
+        </div>
+        <div
+          class="icon text-slate-600 hover:text-slate-800"
+          (click)="onClickEvt_goHome()"
+        >
+          <i class="fas fa-home"></i>
+        </div>
+      </ming-navbar>
+    </ming-header>
+  </div>
+  <div layout-type="body" class="flex-1">
+    <ming-container [align]="'items-start'">
+      <router-outlet></router-outlet>
+    </ming-container>
+  </div>
+  <!-- <div layout-type="footer">
+    <ming-footer></ming-footer>
+  </div> -->
+</ming-layout>

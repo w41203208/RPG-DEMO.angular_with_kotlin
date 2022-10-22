@@ -1,0 +1,8 @@
+.navItem {
+  @apply py-1.5 px-3 mr-5 rounded bg-blue-400 cursor-pointer text-white font-bold;
+  @apply hover:bg-blue-600;
+}
+.selected {
+  @apply bg-blue-600;
+  @apply hover:bg-blue-700;
+}
